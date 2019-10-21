@@ -892,7 +892,28 @@ $speed = Newsletter::$instance->options['scheduler_max'];
                         <?php
                     }
                     ?>
+                       
 
+                    <tr>
+                        <td>
+                            Cron warnings
+                        </td>
+                        <td>
+                            <?php if (defined('NEWSLETTER_CRON_WARNINGS') && !NEWSLETTER_CRON_WARNINGS) { ?>
+                                <span class="tnp-maybe">MAYBE</span>
+                            <?php } else { ?>
+                                <span class="tnp-ok">OK</span>
+                            <?php } ?>
+                        </td>
+                        <td>
+                            <?php if (defined('NEWSLETTER_CRON_WARNINGS') && !NEWSLETTER_CRON_WARNINGS) { ?>
+                            Scheduler warnings are disabled in your wp-config.php with the constant <code>NEWSLETTER_CRON_WARNINGS</code> set to true.
+                            <?php } else { ?>
+
+                            <?php } ?>
+                        </td>
+                    </tr>
+                    
                     <tr>
                         <td>
                             WordPress debug mode
@@ -1064,12 +1085,7 @@ $speed = Newsletter::$instance->options['scheduler_max'];
                         </td>
                     </tr>
                     
-                    <tr>
-                        <td>NEWSLETTER_CRON_INTERVAL</td>
-                        <td>
-                            <?php echo NEWSLETTER_CRON_INTERVAL . ' (seconds)'; ?>
-                        </td>
-                    </tr>
+                    
 
                     <?php /*
                       <tr>

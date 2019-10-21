@@ -1750,7 +1750,7 @@ class NewsletterModule {
      */
     function build_action_url($action, $user = null, $email = null) {
         $url = $this->add_qs($this->get_home_url(), 'na=' . urlencode($action));
-        $url = $this->add_qs(admin_url('admin-ajax.php'), 'action=newsletter&na=' . urlencode($action));
+        //$url = $this->add_qs(admin_url('admin-ajax.php'), 'action=newsletter&na=' . urlencode($action));
         if ($user) {
             $url .= '&nk=' . urlencode($this->get_user_key($user));
         }
