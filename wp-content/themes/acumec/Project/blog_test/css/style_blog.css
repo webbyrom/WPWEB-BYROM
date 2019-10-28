@@ -1,0 +1,51 @@
+body
+{
+	text-align: center; 
+	background: url(../img/backg_blog.jpg) no-repeat center center fixed;
+	background-size: cover;
+	height: 100vh;
+
+}
+h1, h3
+{
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+.date_blog
+{
+	padding: 5px;
+}
+
+
+
+.btn_blog
+{
+	border: 1px solid white;
+	border-radius: 3px;
+	padding: 5px;
+	margin-left: 10px;
+	text-decoration: none;
+	font-color:black;
+ 
+
+}
+.btn_blog:hover
+{
+	color: #fff;
+	background-color:#bf80ff;
+}
+.days
+{
+	padding: 2px;
+	margin: 3px;
+	color: white;
+}
+.comment
+{	
+	margin:10px;
+	padding: 3px;
+	border-radius: 5px;
+	background-color: #ff99e6;
+	text-decoration: none !important;
+}

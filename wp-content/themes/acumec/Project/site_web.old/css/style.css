@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
+  background: gray ;    url(../img/img3.jpg) no-repeat no-repeat center ;
+  font-family: 'Roboto', sans-serif;
+  padding: 25px;
+  text-align: center;
+}*/
+/*
+.navbar {
+  background: #33363D;
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+  border-radius: 20px;
+  }
+.navbar li {
+  display: table-cell;
+  padding: 15px; 
+  min-width: 75px;
+  text-align: center;
+}
+.navbar li a {
+  display: block;
+  color: #14171A;
+  text-decoration: none;
+  font-size: 24px;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+.navbar li.active a {
+  color: #fff;
+  text-shadow: 1px 1px 2px #14171A;
+}
+.navbar li.marker {
+  display: inline-block;
+  position: absolute;
+  height:2px;
+  margin-left: 15px;
+  padding: 0;
+  background: #F45F5F;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+  top: calc(100% - 2px);
+  left: 30px;
+}
+.navbar li.anim {
+  -webkit-animation: 0.4s shake ease-in;
+  animation: 0.4s shake ease-in;
+}
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  50% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes shake {
+  0% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  50% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}*/
+/*header{
+  height: 630px;
+}*/
+
+/*.font-size{
+  font-size: 20px;
+  font-family: 'Libre Baskerville', serif;
+}*/

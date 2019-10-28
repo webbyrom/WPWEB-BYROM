@@ -1,0 +1,289 @@
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body
+{
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+/*============================ NAVIGATION ============================*/
+.navbar
+{
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar .navbar-nav
+{
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+.navbar .navbar-collapse
+{
+    text-align: center;
+}
+.navbar li a
+{
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a
+{
+    color: black !important;
+    background-color: #fff !important;
+}
+.navbar-default .navbar-toggle
+{
+    border-style: none;
+}
+.icon-bar
+{
+    background-color: #fff !important;
+}
+
+/*======== Fin Navigation=====*/
+/*===========principal========*/
+
+section
+{
+    padding: 45px 0 80px 0;
+}
+section .heading 
+{
+    text-align: center;
+    padding-bottom: 50px;        
+}
+section .heading h2
+{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+ul,ol
+{
+    list-style:none;
+}
+
+/*======section presentation/about=====*/
+#about
+{
+  height: 100%;
+}
+
+
+
+
+
+.presentation h2
+{
+  color:black;
+  text-transform: uppercase;
+  text-decoration: underline;
+  padding-top: 45px;
+  
+
+}
+.content-1
+{
+  margin:45px;
+  text-align: center;
+  
+}
+
+
+.presentation
+{
+  background-color: white;
+  text-align: center;
+  color: #262530;
+   z-index: 150;
+  
+}
+.bg
+{ 
+color:#262530;
+background: white;
+}
+
+.button1
+{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  border: 1px solid black;
+  display: inline-block;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  padding: 15px 30px;
+  transition: all 0.3s ease-in 0s;
+
+}
+.button1:hover
+{
+  background: #262530;
+  color: white;
+  text-decoration: none;
+}
+
+.white-divider
+{  
+    width:480px; 
+    height: 2px;
+    background: #fff;
+    margin: 0 auto;
+    flex: none;
+}
+.blue-divider
+{  
+    width:480px; 
+    height: 2px;
+    background:#262530;
+    margin: 0 auto;
+    flex: none;
+}
+
+#Mes_Projets
+
+{  
+    background:#262530;
+
+}
+#Mes_Projets .heading h2
+{   padding-top: 75px;
+    color: #fff;
+
+}
+#Mes_Projets .thumbnail img
+{
+    padding: 5px 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); 
+}
+#Mes_Projets .thumbnail img:hover
+{
+     filter: none;
+    -webkit-filter: none; 
+}
+
+
+/*====================début carousel section passions===============*/
+
+
+#passions .heading h2
+{
+  color:#262530;
+}
+.carousel-control.left, .carousel-control.right
+{
+  color: #262530;
+}
+.carousel-indicators
+{
+    bottom: 0px;
+}
+.carousel-indicators li
+{
+    border-color: #262530;
+}
+.carousel-indicators li.active
+{
+    background-color:#262530;
+}
+#myCarousel .item
+{
+   padding: 40px 30px;
+   text-align: center;
+   margin: 0px auto;
+}
+#myCarousel .item h3
+{
+    color: #262530;
+    font-style: italic;
+}
+.picture
+{
+  margin: 0px auto;
+}
+/*==================Formulaire Contact=========*/
+
+#contact
+{
+  background: #262530;
+}
+.heading
+{
+  text-align: center;
+  margin-bottom: 60px;
+
+}
+h2
+{
+  text-transform: uppercase;
+  color:#fff;
+  padding-top: 20px;
+}
+
+#contact-form
+{
+  font-size:18px;
+  color: #fff;
+  
+}
+
+.form-control
+{
+  height: 50px;
+  font-size: 18px;
+
+}
+.comments
+{
+  font-style: italic;
+  font-size: 18px;
+  color: #fff;
+  height: 25px;
+}
+#contact-form input[type=submit]
+{
+  margin: 40px auto 0px;
+  display: block;
+}
+/*==============Footer===============*/
+
+footer
+{
+    background: #222;
+    padding: 20px 0 40px;
+}
+footer .glyphicon
+{
+    font-size:  25px;
+    margin: 20px;
+    height: 30px;
+    color: grey;
+}
+footer .glyphicon:hover
+{
+    font-size:  35px;
+    color: #fff;
+
+}
+footer h5
+{
+    color: #fff;
+    font-weight: normal;
+}
