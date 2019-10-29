@@ -37,7 +37,7 @@
 
     try
     {
-        $result = new PDO('mysql:host=127.0.0.1:3308;dbname=fourelro_api_pollution;charset=utf8', 'root','123');
+        $result = new PDO('mysql:host=localhost:3306;dbname=api;charset=utf8', 'root','');
 
 
 
@@ -70,7 +70,7 @@
 
     //on récupere tout le contenu de la table consultation_total`
 
-        $total = $result->query("SELECT * FROM `consultation_total` WHERE `pays` LIKE '%001 fra%' ");
+        $total = $result->query("SELECT * FROM `consultation_totale2` WHERE `pays` LIKE '%001 Fra%' ");
         $res_total = $total->fetch();
 
 

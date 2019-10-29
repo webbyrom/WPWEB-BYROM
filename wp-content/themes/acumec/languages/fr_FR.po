@@ -1,21 +1,22 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Acumec\n"
 "POT-Creation-Date: 2019-05-23 14:09+0700\n"
-"PO-Revision-Date: 2019-05-23 14:08+0700\n"
+"PO-Revision-Date: 2019-10-30 00:07+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -31,7 +32,7 @@ msgstr ""
 
 #: 404.php:25
 msgid "VIEW ALL PROJECT"
-msgstr ""
+msgstr "VOIR TOUS"
 
 #: comments.php:31
 msgctxt "comments title"
@@ -61,7 +62,7 @@ msgstr ""
 
 #: comments.php:66
 msgid "Submit Now"
-msgstr ""
+msgstr "Envoyer"
 
 #: comments.php:74
 msgid "Name "
@@ -300,7 +301,7 @@ msgstr ""
 
 #: functions.php:665 functions.php:738
 msgid "Previous"
-msgstr "Précedent"
+msgstr "Précédent"
 
 #: functions.php:671 functions.php:755
 msgid "Next"
@@ -332,8 +333,7 @@ msgid "CmsSuperheroes Shortcodes"
 msgstr ""
 
 #: inc/elements/cms_blog_carousel.php:11 inc/elements/cms_post_carousel.php:11
-#: inc/elements/zo_masonry.php:11
-#: inc/libs/class-tgm-plugin-activation.php:2639
+#: inc/elements/zo_masonry.php:11 inc/libs/class-tgm-plugin-activation.php:2639
 msgid "Source"
 msgstr ""
 
@@ -349,13 +349,11 @@ msgstr ""
 #: inc/elements/cms_blog_carousel.php:27 inc/elements/cms_blog_carousel.php:37
 #: inc/elements/cms_blog_carousel.php:47 inc/elements/cms_blog_carousel.php:57
 #: inc/elements/cms_blog_carousel.php:67 inc/elements/cms_blog_carousel.php:77
-#: inc/elements/cms_blog_carousel.php:90
-#: inc/elements/cms_blog_carousel.php:100
+#: inc/elements/cms_blog_carousel.php:90 inc/elements/cms_blog_carousel.php:100
 #: inc/elements/cms_post_carousel.php:27 inc/elements/cms_post_carousel.php:37
 #: inc/elements/cms_post_carousel.php:50 inc/elements/cms_post_carousel.php:57
 #: inc/elements/cms_post_carousel.php:64 inc/elements/cms_post_carousel.php:75
-#: inc/elements/cms_post_carousel.php:82
-#: inc/elements/cms_post_carousel.php:142
+#: inc/elements/cms_post_carousel.php:82 inc/elements/cms_post_carousel.php:142
 msgid "Blog Setting"
 msgstr ""
 
@@ -387,8 +385,7 @@ msgstr ""
 msgid "Word Number Excerpt"
 msgstr ""
 
-#: inc/elements/cms_blog_carousel.php:94
-#: inc/elements/cms_post_carousel.php:136
+#: inc/elements/cms_blog_carousel.php:94 inc/elements/cms_post_carousel.php:136
 msgid "Show Read More"
 msgstr ""
 
@@ -613,8 +610,7 @@ msgstr ""
 #: inc/elements/cms_custom_heading.php:128
 #: inc/elements/cms_custom_heading.php:144
 #: inc/elements/cms_pricing_table.php:64 inc/elements/cms_pricing_table.php:80
-#: inc/elements/cms_pricing_table.php:96
-#: inc/elements/cms_pricing_table.php:112
+#: inc/elements/cms_pricing_table.php:96 inc/elements/cms_pricing_table.php:112
 #: inc/elements/cms_pricing_table.php:128 vc_params/cms_counter_single.php:165
 #: vc_params/cms_counter_single.php:181 vc_params/cms_counter_single.php:197
 #: vc_params/cms_fancybox_single.php:76 vc_params/cms_fancybox_single.php:93
@@ -731,14 +727,14 @@ msgstr ""
 msgid "Heading Style"
 msgstr ""
 
-#: inc/elements/cms_custom_heading.php:14
-#: inc/elements/cms_pricing_table.php:14 inc/elements/cms_social.php:14
+#: inc/elements/cms_custom_heading.php:14 inc/elements/cms_pricing_table.php:14
+#: inc/elements/cms_social.php:14
 msgid "Style 1"
 msgstr ""
 
-#: inc/elements/cms_custom_heading.php:15
-#: inc/elements/cms_pricing_table.php:15 inc/elements/cms_social.php:15
-#: inc/options/function.options.php:1609 inc/options/meta-options.php:315
+#: inc/elements/cms_custom_heading.php:15 inc/elements/cms_pricing_table.php:15
+#: inc/elements/cms_social.php:15 inc/options/function.options.php:1609
+#: inc/options/meta-options.php:315
 msgid "Style 2"
 msgstr ""
 
@@ -750,8 +746,7 @@ msgstr ""
 msgid "Choose Media Type"
 msgstr ""
 
-#: inc/elements/cms_custom_heading.php:26
-#: inc/elements/cms_pricing_table.php:33
+#: inc/elements/cms_custom_heading.php:26 inc/elements/cms_pricing_table.php:33
 #: inc/elements/cms_pricing_table.php:144
 #: inc/elements/cms_pricing_table.php:157 inc/elements/cms_testimonial.php:20
 #: inc/widgets/cms_image.php:159 inc/widgets/cms_testimonials.php:148
@@ -760,9 +755,8 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: inc/elements/cms_custom_heading.php:27
-#: inc/elements/cms_pricing_table.php:32 vc_params/cms_counter_single.php:27
-#: vc_params/cms_fancybox_single.php:37
+#: inc/elements/cms_custom_heading.php:27 inc/elements/cms_pricing_table.php:32
+#: vc_params/cms_counter_single.php:27 vc_params/cms_fancybox_single.php:37
 msgid "Icon"
 msgstr ""
 
@@ -775,21 +769,18 @@ msgstr ""
 msgid "Image Width"
 msgstr ""
 
-#: inc/elements/cms_custom_heading.php:64
-#: inc/elements/cms_pricing_table.php:48 vc_params/cms_counter_single.php:151
-#: vc_params/cms_fancybox_single.php:54
+#: inc/elements/cms_custom_heading.php:64 inc/elements/cms_pricing_table.php:48
+#: vc_params/cms_counter_single.php:151 vc_params/cms_fancybox_single.php:54
 msgid "Flat Icon"
 msgstr ""
 
-#: inc/elements/cms_custom_heading.php:65
-#: inc/elements/cms_pricing_table.php:49 vc_params/cms_counter_single.php:42
-#: vc_params/cms_fancybox_single.php:56
+#: inc/elements/cms_custom_heading.php:65 inc/elements/cms_pricing_table.php:49
+#: vc_params/cms_counter_single.php:42 vc_params/cms_fancybox_single.php:56
 msgid "Open Iconic"
 msgstr ""
 
-#: inc/elements/cms_custom_heading.php:67
-#: inc/elements/cms_pricing_table.php:51 vc_params/cms_counter_single.php:47
-#: vc_params/cms_fancybox_single.php:61
+#: inc/elements/cms_custom_heading.php:67 inc/elements/cms_pricing_table.php:51
+#: vc_params/cms_counter_single.php:47 vc_params/cms_fancybox_single.php:61
 msgid "RT Icon"
 msgstr ""
 
@@ -1116,9 +1107,9 @@ msgstr ""
 
 #: inc/elements/cms_post_carousel.php:86 inc/elements/cms_post_carousel.php:99
 #: inc/elements/cms_post_carousel.php:116
-#: inc/elements/cms_post_carousel.php:131
-#: vc_params/cms_fancybox_single.php:272 vc_params/cms_fancybox_single.php:285
-#: vc_params/cms_fancybox_single.php:302 vc_params/cms_fancybox_single.php:317
+#: inc/elements/cms_post_carousel.php:131 vc_params/cms_fancybox_single.php:272
+#: vc_params/cms_fancybox_single.php:285 vc_params/cms_fancybox_single.php:302
+#: vc_params/cms_fancybox_single.php:317
 msgid "Animation"
 msgstr ""
 
@@ -1154,13 +1145,11 @@ msgstr ""
 msgid "BounceInRight"
 msgstr ""
 
-#: inc/elements/cms_post_carousel.php:105
-#: vc_params/cms_fancybox_single.php:291
+#: inc/elements/cms_post_carousel.php:105 vc_params/cms_fancybox_single.php:291
 msgid "Data duration"
 msgstr ""
 
-#: inc/elements/cms_post_carousel.php:122
-#: vc_params/cms_fancybox_single.php:308
+#: inc/elements/cms_post_carousel.php:122 vc_params/cms_fancybox_single.php:308
 msgid "Data delay"
 msgstr ""
 
@@ -3916,7 +3905,7 @@ msgstr[1] ""
 
 #: inc/widgets/cms_recentpost.php:95
 msgid "Read more"
-msgstr "Lire la suite"
+msgstr ""
 
 #: inc/widgets/cms_recentpost.php:119
 msgid "Number of post to show:"
@@ -4513,7 +4502,7 @@ msgstr ""
 
 #: vc_templates/cms_grid--projects.php:43 vc_templates/zo_masonry.php:43
 msgid "View All Project"
-msgstr ""
+msgstr "VOIR TOUS"
 
 #: vc_templates/cms_grid--service1.php:23
 #: vc_templates/cms_grid--service3.php:23 vc_templates/cms_grid--team1.php:23
@@ -4529,8 +4518,7 @@ msgstr ""
 msgid "Get Start Now"
 msgstr ""
 
-#: vc_templates/cms_pricing_table.php:75
-#: vc_templates/cms_pricing_table.php:135
+#: vc_templates/cms_pricing_table.php:75 vc_templates/cms_pricing_table.php:135
 msgid "Purchase Plan"
 msgstr ""
 
@@ -4554,8 +4542,7 @@ msgstr ""
 msgid "Subtotal:"
 msgstr ""
 
-#: woocommerce/cart/cart-totals.php:39
-#: woocommerce/checkout/review-order.php:59
+#: woocommerce/cart/cart-totals.php:39 woocommerce/checkout/review-order.php:59
 msgid "Subtotal"
 msgstr ""
 

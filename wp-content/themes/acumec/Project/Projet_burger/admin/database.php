@@ -2,10 +2,10 @@
 
 class Database
 {
-    private static $dbHost = "localhost:3308";  //private appartient a  laclasse Database il n'y a que la classe database qui y accede
+    private static $dbHost = "localhost:3306";  //private appartient a  laclasse Database il n'y a que la classe database qui y accede
     private static $dbName = "burger_code";
     private static $dbUsername = "root";
-    private static $dbUserpassword = "123";
+    private static $dbUserpassword = "";
     
     private static $connection = null;
     

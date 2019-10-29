@@ -13,7 +13,7 @@
 
 
 //connexion a la base 
-     $bdd = new PDO('mysql:host=localhost:3308;dbname=fourelro_api_pollution;charset=utf8', 'root','123');
+     $bdd = new PDO('mysql:host=localhost:3306;dbname=api;charset=utf8', 'root','');
     
 
     
@@ -48,8 +48,8 @@
 
     //on récupére tout le contenu de la table consultation_total`
     
-    $total = $bdd->query("SELECT * FROM `consultation_total` WHERE `pays` LIKE '%001 fra%' ");
-    $res_total = $total->fetch();
+   //$total = $bdd->query("SELECT * FROM `consultation_totale2` WHERE `pays` LIKE '%001 Fra%' ");
+   // $res_total = $total->fetch();
 
 
 
