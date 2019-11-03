@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Acumec\n"
 "POT-Creation-Date: 2019-05-23 14:09+0700\n"
-"PO-Revision-Date: 2019-10-30 00:07+0100\n"
+"PO-Revision-Date: 2019-10-31 16:10+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -22,13 +22,13 @@ msgstr ""
 
 #: 404.php:20
 msgid "OH, CRAP"
-msgstr ""
+msgstr "OooOOOUPS !!!! "
 
 #: 404.php:21
 msgid ""
 "We Can't Seem to Find the Page\n"
 "You're Looking for."
-msgstr ""
+msgstr "Nous ne trouvons pas la page !!!"
 
 #: 404.php:25
 msgid "VIEW ALL PROJECT"
@@ -45,11 +45,11 @@ msgctxt "comments title"
 msgid "( %1$s ) COMMENT "
 msgid_plural "0%1$s COMMENTS"
 msgstr[0] ""
-msgstr[1] ""
+msgstr[1] "Commentaires"
 
 #: comments.php:63
 msgid "LEAVE A COMMENT"
-msgstr ""
+msgstr "LAISSER UN COMMENTAIRE"
 
 #: comments.php:64
 #, php-format
@@ -58,7 +58,7 @@ msgstr ""
 
 #: comments.php:65
 msgid "Cancel Reply"
-msgstr ""
+msgstr "Annuler la réponse"
 
 #: comments.php:66
 msgid "Submit Now"
@@ -66,26 +66,26 @@ msgstr "Envoyer"
 
 #: comments.php:74
 msgid "Name "
-msgstr ""
+msgstr "Nom "
 
 #: comments.php:79 flex-login/auth_form.temp.php:137
 #: woocommerce/single-product-reviews.php:82
 #: woocommerce/single-product-reviews.php:134
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 #: comments.php:83
 msgid "Phone Number"
-msgstr ""
+msgstr "Téléphone"
 
 #: comments.php:87 inc/options/function.options.php:964
 #: inc/options/function.options.php:1128
 msgid "Comment"
-msgstr ""
+msgstr "Commentaire"
 
 #: comments.php:97
 msgid "Comments are closed."
-msgstr ""
+msgstr "Les commentaires sont fermés."
 
 #: flex-login/auth_form.temp.php:12
 msgid "Login Register"
@@ -93,7 +93,7 @@ msgstr ""
 
 #: flex-login/auth_form.temp.php:29
 msgid "Login"
-msgstr ""
+msgstr "Connexion"
 
 #: flex-login/auth_form.temp.php:30 flex-login/auth_form.temp.php:32
 msgid "Register"
@@ -101,7 +101,7 @@ msgstr ""
 
 #: flex-login/auth_form.temp.php:31
 msgid "Sign in"
-msgstr ""
+msgstr "Se connecter"
 
 #: flex-login/auth_form.temp.php:33
 msgid "Sign in or register"
@@ -3215,19 +3215,19 @@ msgstr ""
 
 #: inc/options/meta-options.php:437
 msgid "Start Date"
-msgstr ""
+msgstr "Date de début"
 
 #: inc/options/meta-options.php:438
 msgid "Project Start Date"
-msgstr ""
+msgstr "Date de début du projet"
 
 #: inc/options/meta-options.php:443
 msgid "End Date"
-msgstr ""
+msgstr "Date de Fin"
 
 #: inc/options/meta-options.php:444
 msgid "Project End Date"
-msgstr ""
+msgstr "Fin du Projet"
 
 #: inc/options/meta-options.php:455
 msgid "Team Option"
@@ -3247,7 +3247,7 @@ msgstr ""
 
 #: inc/options/meta-options.php:480 woocommerce/wc-template-hooks.php:452
 msgid "Email Address"
-msgstr ""
+msgstr "Adresse Mail"
 
 #: inc/options/meta-options.php:485
 msgid "Phone No"
@@ -3641,12 +3641,12 @@ msgstr ""
 msgctxt "comments title"
 msgid "%1$s comment "
 msgid_plural "%1$s comments"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1$s commentaire"
+msgstr[1] "%1$s commentaires"
 
 #: inc/template.functions.php:575 inc/template.functions.php:1117
 msgid "Posted in "
-msgstr ""
+msgstr "Publié dans"
 
 #: inc/template.functions.php:595 inc/template.functions.php:1137
 #: inc/template.functions.php:1374 inc/template.functions.php:1410
@@ -3765,7 +3765,7 @@ msgstr ""
 
 #: inc/template.functions.php:1350 vc_templates/cms_blog_carousel.php:64
 msgid "Posted in"
-msgstr ""
+msgstr "Publié dans"
 
 #: inc/widgets/cart_search/cart_search.php:12
 #: inc/widgets/cart_search/cart_search.php:22
@@ -4030,7 +4030,7 @@ msgstr ""
 
 #: inc/widgets/recent_post_v2.php:91
 msgid "Read all Comments"
-msgstr ""
+msgstr "Lire tous les commentaires"
 
 #: inc/widgets/recent_post_v2.php:151 inc/widgets/recent_post_v3.php:145
 msgid "Show Description:"
@@ -4066,7 +4066,7 @@ msgstr ""
 
 #: inc/widgets/recent_post_v3.php:161
 msgid "Link:"
-msgstr ""
+msgstr "Lien:"
 
 #: single-case_studies.php:51 single-project.php:117 single-service.php:84
 #: single-team.php:99 single-templates/single/content-audio.php:29
@@ -4094,31 +4094,31 @@ msgstr ""
 
 #: single-project.php:87
 msgid "Live Demo: "
-msgstr ""
+msgstr "Démo en direct:"
 
 #: single-project.php:92
 msgid "Start Date: "
-msgstr ""
+msgstr "Date de Début:"
 
 #: single-project.php:99
 msgid "Category: "
-msgstr ""
+msgstr "Catégorie:"
 
 #: single-project.php:104
 msgid "End Date: "
-msgstr ""
+msgstr "date de Fin:"
 
 #: single-team.php:49 vc_templates/cms_grid--team1.php:98
 msgid "EMAIL ADDRESS: "
-msgstr ""
+msgstr "ADRESSE MAIL:"
 
 #: single-team.php:52 vc_templates/cms_grid--team1.php:103
 msgid "PHONE NO: "
-msgstr ""
+msgstr "TELEPHONE:"
 
 #: single-team.php:55 vc_templates/cms_grid--team1.php:108
 msgid "LOCATION: "
-msgstr ""
+msgstr "ADRESSE:"
 
 #: single-templates/columns/content-audio.php:44
 #: single-templates/columns/content-audio.php:69
@@ -4498,7 +4498,7 @@ msgstr ""
 
 #: vc_templates/cms_grid--blog2.php:94
 msgid "Posted in: "
-msgstr ""
+msgstr "Publié dans:"
 
 #: vc_templates/cms_grid--projects.php:43 vc_templates/zo_masonry.php:43
 msgid "View All Project"
@@ -4762,11 +4762,11 @@ msgstr[1] ""
 
 #: woocommerce/wc-template-hooks.php:425 woocommerce/wc-template-hooks.php:436
 msgid "First Name *"
-msgstr ""
+msgstr "PRENOM*"
 
 #: woocommerce/wc-template-hooks.php:426 woocommerce/wc-template-hooks.php:437
 msgid "Last Name *"
-msgstr ""
+msgstr "NOM DE FAMILLE*"
 
 #: woocommerce/wc-template-hooks.php:427 woocommerce/wc-template-hooks.php:438
 msgid "Company Name"
@@ -4774,7 +4774,7 @@ msgstr ""
 
 #: woocommerce/wc-template-hooks.php:428
 msgid "Email Address *"
-msgstr ""
+msgstr "Adresse Mail *"
 
 #: woocommerce/wc-template-hooks.php:429
 msgid "Phone *"
