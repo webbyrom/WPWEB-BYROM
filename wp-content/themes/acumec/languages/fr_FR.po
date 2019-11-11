@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Acumec\n"
 "POT-Creation-Date: 2019-05-23 14:09+0700\n"
-"PO-Revision-Date: 2019-10-31 16:10+0100\n"
+"PO-Revision-Date: 2019-11-05 17:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -449,7 +449,7 @@ msgstr ""
 #: inc/elements/cms_post_carousel.php:160
 #: inc/elements/cms_testimonial_carousel.php:176
 msgid "Show Next/Preview"
-msgstr ""
+msgstr "Afficher Suivant/Précédent"
 
 #: inc/elements/cms_blog_carousel.php:125
 #: inc/elements/cms_client_carousel.php:108

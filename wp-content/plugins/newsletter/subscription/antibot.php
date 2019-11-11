@@ -145,21 +145,27 @@ if ($controls->is_action()) {
                 <div id="tabs-blacklists">
                     <table class="form-table">
                         <tr>
-                            <th><?php _e('IP black list', 'newsletter') ?></th>
+                            <th>
+                                <?php _e('IP black list', 'newsletter') ?>
+                                <?php $controls->field_help('https://www.thenewsletterplugin.com/documentation/antiflood#ip') ?>
+                            </th>
                             <td>
                                 <?php
                                 $controls->textarea('ip_blacklist');
                                 ?>
-                                <?php $controls->help('https://www.thenewsletterplugin.com/documentation/antiflood') ?>
+                                <p class="description"><?php _e('One per line', 'newsletter')?></p>
                             </td>
                         </tr>
                         <tr>
-                            <th><?php _e('Address black list', 'newsletter') ?></th>
+                            <th>
+                                <?php _e('Address black list', 'newsletter') ?>
+                                <?php $controls->field_help('https://www.thenewsletterplugin.com/documentation/antiflood#domains') ?>
+                            </th>
                             <td>
                                 <?php
                                 $controls->textarea('address_blacklist');
                                 ?>
-                                <?php $controls->help('https://www.thenewsletterplugin.com/documentation/antiflood') ?>
+                                <p class="description"><?php _e('One per line', 'newsletter')?></p>
                             </td>
                         </tr>
                     </table>
