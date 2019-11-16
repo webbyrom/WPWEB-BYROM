@@ -239,14 +239,11 @@ canvas {
 
 }
 
-
-
-
 #couleursvg{
   fill:  #C51F11; /*rouge*/
 }
 
-#couleursvg:hover{
+#couleursvg :hover{
   fill: #EFFAFF; /*blanc*/
 }
 

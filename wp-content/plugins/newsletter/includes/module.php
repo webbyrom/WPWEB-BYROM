@@ -571,7 +571,7 @@ class NewsletterModule {
         }
         return $r;
     }
-    
+
     function get_results($query) {
         global $wpdb;
         $r = $wpdb->get_results($query);
@@ -581,7 +581,7 @@ class NewsletterModule {
             $logger->fatal($wpdb->last_error);
         }
         return $r;
-    }    
+    }
 
     /**
      * 
@@ -2262,6 +2262,19 @@ class NewsletterModule {
             return (int) $var['id'];
         }
         return (int) $var;
+    }
+
+    static function to_array($text) {
+        $text = trim($text);
+        if (empty($text)) {
+            return array();
+        }
+        $text = preg_split("/\\r\\n/", $text);
+        $text = array_map('trim', $text);
+        $text = array_map('strtolower', $text);
+        $text = array_filter($text);
+
+        return $text;
     }
 
     static function sanitize_ip($ip) {

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-11-07 07:32:46+0000\n"
+"PO-Revision-Date: 2019-11-12 13:14:26+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1871,8 +1871,8 @@ msgstr "Le package %s de WooCommerce est manquant"
 msgctxt "with first and last result"
 msgid "Showing %1$d&ndash;%2$d of %3$d result"
 msgid_plural "Showing %1$d&ndash;%2$d of %3$d results"
-msgstr[0] "Affichage de %1$d&ndash;%2$d sur %3$d resultat"
-msgstr[1] "Affichage de %1$d&ndash;%2$d sur %3$d resultats"
+msgstr[0] "Affichage de %1$d&ndash;%2$d sur %3$d résultat"
+msgstr[1] "Affichage de %1$d&ndash;%2$d sur %3$d résultats"
 
 #: i18n/states.php:1407
 msgid "Zombo"
