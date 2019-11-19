@@ -1,0 +1,7 @@
+AuthName "Connexion Admin :"
+
+AuthType Basic
+
+AuthUserFile "/home/htdocs/students/fourelro/projets/Projet_burger/admin/.htpasswd"
+
+Require valid-user
