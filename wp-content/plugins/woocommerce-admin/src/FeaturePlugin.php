@@ -54,11 +54,33 @@ class FeaturePlugin {
 	 * Init the feature plugin, only if we can detect both Gutenberg and WooCommerce.
 	 */
 	public function init() {
+		/**
+		 * Filter allowing WooCommerce Admin to be disabled.
+		 *
+		 * @param bool $disabled False.
+		 */
+		if ( apply_filters( 'woocommerce_admin_disabled', false ) ) {
+			return;
+		}
+
 		$this->define_constants();
+
+		require_once WC_ADMIN_ABSPATH . '/includes/core-functions.php';
+		require_once WC_ADMIN_ABSPATH . '/includes/feature-config.php';
+		require_once WC_ADMIN_ABSPATH . '/includes/page-controller-functions.php';
+		require_once WC_ADMIN_ABSPATH . '/includes/wc-admin-update-functions.php';
+
 		register_activation_hook( WC_ADMIN_PLUGIN_FILE, array( $this, 'on_activation' ) );
 		register_deactivation_hook( WC_ADMIN_PLUGIN_FILE, array( $this, 'on_deactivation' ) );
-		add_action( 'plugins_loaded', array( $this, 'on_plugins_loaded' ) );
-		add_filter( 'action_scheduler_store_class', array( $this, 'replace_actionscheduler_store_class' ) );
+		if ( did_action( 'plugins_loaded' ) ) {
+			self::on_plugins_loaded();
+		} else {
+			// Make sure we hook into `plugins_loaded` before core's Automattic\WooCommerce\Package::init().
+			// If core is network activated but we aren't, the packaged version of WooCommerce Admin will
+			// attempt to use a data store that hasn't been loaded yet - because we've defined our constants here.
+			// See: https://github.com/woocommerce/woocommerce-admin/issues/3869.
+			add_action( 'plugins_loaded', array( $this, 'on_plugins_loaded' ), 9 );
+		}
 	}
 
 	/**
@@ -77,6 +99,12 @@ class FeaturePlugin {
 	 * @return void
 	 */
 	public function on_deactivation() {
+		// Don't clean up if the WooCommerce Admin package is in core.
+		// NOTE: Any future divergence from the core package will need to be accounted for here.
+		if ( defined( 'WC_ADMIN_PACKAGE_EXISTS' ) && WC_ADMIN_PACKAGE_EXISTS ) {
+			return;
+		}
+
 		// Check if we are deactivating due to dependencies not being satisfied.
 		// If WooCommerce is disabled we can't include files that depend upon it.
 		if ( ! $this->has_satisfied_dependencies() ) {
@@ -123,7 +151,7 @@ class FeaturePlugin {
 		$this->define( 'WC_ADMIN_PLUGIN_FILE', WC_ADMIN_ABSPATH . 'woocommerce-admin.php' );
 		// WARNING: Do not directly edit this version number constant.
 		// It is updated as part of the prebuild process from the package.json value.
-		$this->define( 'WC_ADMIN_VERSION_NUMBER', '0.22.0' );
+		$this->define( 'WC_ADMIN_VERSION_NUMBER', '1.0.3' );
 	}
 
 	/**
@@ -161,51 +189,13 @@ class FeaturePlugin {
 	}
 
 	/**
-	 * Filter in our ActionScheduler Store class.
-	 *
-	 * @param string $store_class ActionScheduler Store class name.
-	 * @return string ActionScheduler Store class name.
-	 */
-	public function replace_actionscheduler_store_class( $store_class ) {
-		// Don't override any other overrides.
-		if ( 'ActionScheduler_wpPostStore' !== $store_class ) {
-			return $store_class;
-		}
-
-		// Don't override if action scheduler is 3.0.0 or greater.
-		if ( version_compare( \ActionScheduler_Versions::instance()->latest_version(), '3.0', '>=' ) ) {
-			return $store_class;
-		}
-
-		return 'Automattic\WooCommerce\Admin\Overrides\WPPostStore';
-	}
-
-	/**
-	 * Removes core hooks in favor of our local feature plugin handlers.
-	 *
-	 * @see WC_Admin_Library::__construct()
+	 * Set up our admin hooks and plugin loader.
 	 */
 	protected function hooks() {
-		remove_action( 'init', array( 'WC_Admin_Library', 'load_features' ) );
-		remove_action( 'admin_enqueue_scripts', array( 'WC_Admin_Library', 'register_scripts' ) );
-		remove_action( 'admin_enqueue_scripts', array( 'WC_Admin_Library', 'load_scripts' ), 15 );
-		remove_action( 'woocommerce_components_settings', array( 'WC_Admin_Library', 'add_component_settings' ) );
-		remove_filter( 'admin_body_class', array( 'WC_Admin_Library', 'add_admin_body_classes' ) );
-		remove_action( 'admin_menu', array( 'WC_Admin_Library', 'register_page_handler' ) );
-		remove_filter( 'admin_title', array( 'WC_Admin_Library', 'update_admin_title' ) );
-
-		remove_action( 'rest_api_init', array( 'WC_Admin_Library', 'register_user_data' ) );
-		remove_action( 'in_admin_header', array( 'WC_Admin_Library', 'embed_page_header' ) );
-		remove_filter( 'woocommerce_settings_groups', array( 'WC_Admin_Library', 'add_settings_group' ) );
-		remove_filter( 'woocommerce_settings-wc_admin', array( 'WC_Admin_Library', 'add_settings' ) );
-
-		remove_action( 'admin_head', array( 'WC_Admin_Library', 'update_link_structure' ), 20 );
-
-		new Loader();
-
 		add_filter( 'woocommerce_admin_features', array( $this, 'replace_supported_features' ) );
 		add_action( 'admin_menu', array( $this, 'register_devdocs_page' ) );
 
+		new Loader();
 	}
 
 	/**
@@ -216,7 +206,7 @@ class FeaturePlugin {
 	protected function get_dependency_errors() {
 		$errors                      = array();
 		$wordpress_version           = get_bloginfo( 'version' );
-		$minimum_wordpress_version   = '5.2';
+		$minimum_wordpress_version   = '5.3';
 		$minimum_woocommerce_version = '3.6';
 		$wordpress_minimum_met       = version_compare( $wordpress_version, $minimum_wordpress_version, '>=' );
 		$woocommerce_minimum_met     = class_exists( 'WooCommerce' ) && version_compare( WC_VERSION, $minimum_woocommerce_version, '>=' );
@@ -247,7 +237,7 @@ class FeaturePlugin {
 	 *
 	 * @return bool
 	 */
-	protected function has_satisfied_dependencies() {
+	public function has_satisfied_dependencies() {
 		$dependency_errors = $this->get_dependency_errors();
 		return 0 === count( $dependency_errors );
 	}
@@ -296,7 +286,7 @@ class FeaturePlugin {
 	 * @param array $features Array of feature slugs.
 	 */
 	public function replace_supported_features( $features ) {
-		$feature_config = apply_filters( 'wc_admin_get_feature_config', wc_admin_get_feature_config() );
+		$feature_config = apply_filters( 'woocommerce_admin_get_feature_config', wc_admin_get_feature_config() );
 		$features       = array_keys( array_filter( $feature_config ) );
 		return $features;
 	}

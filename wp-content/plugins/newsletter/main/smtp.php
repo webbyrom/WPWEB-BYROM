@@ -1,5 +1,5 @@
 <?php
-if (!defined('ABSPATH')) exit;
+defined('ABSPATH') || exit;
 
 @include_once NEWSLETTER_INCLUDES_DIR . '/controls.php';
 $module = Newsletter::instance();
@@ -31,6 +31,8 @@ if (!$controls->is_action()) {
 
         if (is_wp_error($r)) {
             $controls->errors = $r->get_error_message();
+            $controls->errors .= '<br><a href="https://www.thenewsletterplugin.com/documentation/?p=15170" target="_blank"><strong>' . __('Read more', 'newsletter') . '</strong></a>.';
+
         } else {
             $controls->messages = 'Success.';
         }
@@ -52,7 +54,7 @@ if (empty($controls->data['enabled']) && !empty($controls->data['host'])) {
         <h2><?php _e('SMTP Settings', 'newsletter') ?></h2>
     
     <p>
-        <i class="fa fa-info-circle"></i> <a href="https://www.thenewsletterplugin.com/extensions" target="_blank">Discover how SMTP services can boost your newsletters!</a>
+        <i class="fas fa-info-circle"></i> <a href="https://www.thenewsletterplugin.com/extensions" target="_blank">Discover how SMTP services can boost your newsletters!</a>
         <!--
     <p>SMTP (Simple Mail Transfer Protocol) refers to external delivery services you can use to send emails.</p>
     <p>SMTP services are usually more reliable, secure and spam-aware than the standard delivery method available to your blog.</p>
@@ -103,7 +105,7 @@ if (empty($controls->data['enabled']) && !empty($controls->data['host'])) {
                 <th>Authentication</th>
                 <td>
                     user: <?php $controls->text('user', 30); ?>
-                    password: <?php $controls->text('pass', 30); ?>
+                    password: <?php $controls->password('pass', 30); ?>
                     <p class="description">
                         If authentication is not required, leave "user" field blank.
                     </p>
